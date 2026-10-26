@@ -1,11 +1,17 @@
-import { useState } from 'react'
-
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="bg-slate-500">TODO</div>
+    <div className="flex flex-col gap-4 px-4">
+
+      <h1 className='text-center'>TODO</h1>
+
+      <div className="">
+        <form >
+          <input  type="text" placeholder="Type To-Do item" />
+          <button type="submit">ADD</button>
+        </form>
+      </div>
+    </div>
   )
 }
 
