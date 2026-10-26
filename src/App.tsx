@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Todo } from "./types";
+import TodoItem from "./Components/TodoItem";
 
 function App() {
   const [todoList, setTodoList] = useState<Todo[]>([])
@@ -29,7 +30,7 @@ function App() {
       </div>
 
       <div>
-        {todoList.map(item => <p key={item.id}>{item.content}</p>)}
+        {todoList.map(item => <TodoItem key={item.id} todo={item} />)}
       </div>
     </div>
   )
