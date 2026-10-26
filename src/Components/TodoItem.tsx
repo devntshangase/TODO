@@ -1,12 +1,13 @@
-import React from 'react'
+import type { Todo } from '../types'
+type TodoItemProps = { todo: Todo }
 
-function TodoItem({content, id, checked}) {
+function TodoItem( {todo}: TodoItemProps) {
   return (
-    <div>
-        <p>{content}</p>
+    <div key={todo.id}>
+        <p>{todo.content}</p>
         <div className="">
             <button>Delete</button>
-            <button>{checked? "checked" : "not Checked"}</button>
+            <button>{todo.checked? "checked" : "not Checked"}</button>
         </div>
     </div>
   )
